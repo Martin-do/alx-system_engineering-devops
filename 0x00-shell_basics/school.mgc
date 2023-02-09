@@ -1,2 +1,2 @@
 #!/bin/bash
-magic --offset=0 --string=SCHOOL
+magic 0 quad 5343484f4f4c School  
