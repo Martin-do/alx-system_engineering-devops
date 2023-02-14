@@ -1,5 +1,5 @@
 #!/bin/bash
-GREEN='\033[1;5;31m'
+GREEN='\033[1;31m'
 WHITE='\033[0;37m'
 git add .
 read -p "Enter commit message: " commit_msg
