@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Display "Best School" 10 times
+files=$(ls)
+for _ in $files; do
+    file_name=$(cut -d "-" -f 2 <<< "$_")
+    echo "$file_name"
+done
