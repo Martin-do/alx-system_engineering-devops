@@ -4,5 +4,5 @@
 # - localhost resolves to 127.0.0.2
 # - facebook.com resolves to 8.8.8.8.
 
-sudo sed -i -e 's/127.0.0.1 localhost/127.0.0.2 localhost/g' /etc/hosts
+sudo sed -i -e 's/127.0.0.\tlocalhost/' /etc/hosts
 echo -e "8.8.8.8\tfacebook.com" >> //etc/hosts
