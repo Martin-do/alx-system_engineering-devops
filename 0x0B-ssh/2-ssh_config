@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# configure machine to connect to server without
+# password
+
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    HostName 54.173.90.89
+    User ubuntu
