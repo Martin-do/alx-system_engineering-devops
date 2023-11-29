@@ -1,6 +1,9 @@
 # Using Puppet, install flask from pip3.
-exec { 'pkill killmenow':
-  command     => 'pkill killmenow',
-  path        => ['/bin', '/usr/bin'],
-  refreshonly => true,
+package { 'python3-pip':
+  ensure => '2.1.0',
+}
+
+exec { 'install Flask':
+  command => 'pip install Flask',
+  path => ['/usr/bin'],
 }
