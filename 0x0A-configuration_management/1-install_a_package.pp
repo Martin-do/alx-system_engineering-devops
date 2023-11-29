@@ -1,5 +1,6 @@
 # Using Puppet, install flask from pip3.
-package { 'flask' :
-    ensure   => '2.1.0',
-    provider => 'pip',
-    }
+exec { 'kill_killmenow_process':
+  command => 'pkill killmenow',
+  path => ['/bin', '/usr/bin'],
+  refreshonly => true,
+}
