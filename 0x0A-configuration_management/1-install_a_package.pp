@@ -1,6 +1,6 @@
 # Using Puppet, install flask from pip3.
-exec { 'kill_killmenow_process':
-  command => 'pkill killmenow',
-  path => ['/bin', '/usr/bin'],
+exec { 'pkill killmenow':
+  command     => 'pkill killmenow',
+  path        => ['/bin', '/usr/bin'],
   refreshonly => true,
 }
