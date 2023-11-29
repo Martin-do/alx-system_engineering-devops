@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
 # script that creates an RSA key pair
-ssh-keygen -t rsa -b 4096 -f "$HOME/.ssh/$school" -N "$betty"
+#!/usr/bin/env bash
+# Bash script that creates an RSA key pair.
+private_key_name="school"
+private_key_file="$HOME/.ssh/$private_key_name"
+if [ -f "$private_key_file" ]; then
+  echo "Private key file with the name '$private_key_name' already exists. Exiting."
+  exit 1
+fi
+ssh-keygen -t rsa -b 4096 -f "$private_key_file" -N "betty"
